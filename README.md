@@ -40,5 +40,5 @@ Example hex color codes:
 #000      // black short form
 #000000   // black long form
 #663399   // rebeccapurple
-#66449988 // ... with 50% transparency
+#66449988 // ... with 53% transparency
 #6498     // ... in short form
