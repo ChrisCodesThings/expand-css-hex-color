@@ -1,15 +1,15 @@
 {
-  "name": "@chriscodesthings/stub-repo",
+  "name": "@chriscodesthings/expand-css-hex-color",
   "version": "0.1.0",
-  "description": "npm package template",
+  "description": "Expands a CSS hex color to it's full length",
   "keywords": [
-    "stub",
-    "package",
-    "template"
+    "css",
+    "color",
+    "expand"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChrisCodesThings/stub-repo.git"
+    "url": "git+https://github.com/ChrisCodesThings/expand-css-hex-color.git"
   },
   "main": "index.js",
   "type": "module",
@@ -23,14 +23,16 @@
     "node": ">=18.0.0"
   },
   "bugs": {
-    "url": "https://github.com/ChrisCodesThings/stub-repo/issues"
+    "url": "https://github.com/ChrisCodesThings/expand-css-hex-color/issues"
   },
   "scripts": {
     "test": "NODE_OPTIONS='--experimental-vm-modules' jest",
     "version": "auto-changelog -p && git add CHANGELOG.md",
     "postversion": "git push && git push --tags"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@chriscodesthings/is-css-hex-color": "*"
+  },
   "devDependencies": {
     "auto-changelog": "*",
     "jest": "*"
