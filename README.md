@@ -29,7 +29,7 @@ expandCSSColor(col);
 
 ### Return Value
 
-Returns the long form of the CSS color.
+Returns the long form of the CSS color code.
 
 ## Description
 
