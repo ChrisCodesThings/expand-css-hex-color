@@ -20,12 +20,12 @@ console.log(expandCSSColor("#cafe"));
 ## Syntax
 
 ```js
-expandCSSColor(col);
+expandCSSColor(color);
 ```
 
 ### Parameters
 
-- *col*: a CSS hex color string
+- *color*: a CSS hex color string
 
 ### Return Value
 
@@ -34,6 +34,8 @@ Returns the long form of the CSS color code.
 ## Description
 
 Expands a CSS hex color code. If the string passed is already a long form color code, the color is returned unmodified. If a short form color code is passed, the long form of the color is returned.
+
+The alpha value FF is appended if no alpha is present.
 
 Example hex color codes:
 ```
