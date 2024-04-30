@@ -1,7 +1,7 @@
 {
   "name": "@chriscodesthings/expand-css-hex-color",
   "version": "1.0.0",
-  "description": "Expands a CSS hex color to it's full length",
+  "description": "Expands a CSS hex color to it's longest form",
   "keywords": [
     "css",
     "color",
@@ -11,31 +11,31 @@
     "type": "git",
     "url": "git+https://github.com/ChrisCodesThings/expand-css-hex-color.git"
   },
+  "bugs": {
+    "url": "https://github.com/ChrisCodesThings/expand-css-hex-color/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "auto-changelog": "^2.4.0",
+    "jest": "^29.7.0",
+    "typescript": "^5.4.5"
+  },
   "main": "index.js",
   "type": "module",
   "files": [
     "/CHANGELOG.md",
     "/index.js",
-    "/src",
-    "/dist"
+    "/index.d.ts",
+    "/src"
   ],
   "engines": {
     "node": ">=18.0.0"
   },
-  "bugs": {
-    "url": "https://github.com/ChrisCodesThings/expand-css-hex-color/issues"
-  },
   "scripts": {
-    "test": "NODE_OPTIONS='--experimental-vm-modules' jest",
+    "gen-dts": "find . -type f -name '*.d.ts' -not -path './node_modules/*' -delete && tsc -d --emitDeclarationOnly --allowJs index.js",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest && npm run gen-dts",
     "version": "auto-changelog -p && git add CHANGELOG.md",
     "postversion": "git push && git push --tags"
-  },
-  "dependencies": {
-    "@chriscodesthings/is-css-hex-color": "^1.0.1"
-  },
-  "devDependencies": {
-    "auto-changelog": "^2.4.0",
-    "jest": "^29.7.0"
   },
   "publishConfig": {
     "access": "public"
@@ -43,7 +43,7 @@
   "author": {
     "name": "Chris Dabrowa",
     "email": "fanmail@chris.dabrowa.uk",
-    "url": "http://chris.dabrowa.uk/code"
+    "url": "http://chris.dabrowa.uk/code/js"
   },
   "contributors": [],
   "license": "MIT"

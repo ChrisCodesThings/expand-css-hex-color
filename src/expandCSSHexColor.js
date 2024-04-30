@@ -1,27 +1,22 @@
-import isCSSHexColor from "@chriscodesthings/is-css-hex-color";
+// @ts-check
 
-function canBeExpanded(col) {
-    return col.length == 4 || col.length == 5;
-}
+/**
+ * Expands a CSS hex colour code to it's longest form
+ * @param {string} col CSS hex colour code to expand
+ * @returns {string}
+ */
+export default function expandCSSHexColorCode(col) {
+    col = col.slice(1);
 
-function expandColor(col) {
-    let expandedColor = "#";
+    if (col.length == 3 || col.length == 4) {
+        let expandedColour = "";
 
-    for (let c of col.slice(1)) {
-        expandedColor += c + c;
+        for (let c of col) {
+            expandedColour += c + c;
+        }
+
+        col = expandedColour;
     }
 
-    return expandedColor;
-}
-
-export default function (col) {
-    if (!isCSSHexColor(col)) {
-        return;
-    }
-
-    if (!canBeExpanded(col)) {
-        return col;
-    }
-
-    return expandColor(col);
+    return ("#" + col + "ff").slice(0, 9).toLowerCase();
 }
