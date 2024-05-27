@@ -20,6 +20,7 @@ Example hex color codes:
 
 ### See...
 - [Install/Usage](#install "Install and Usage")
+- [Types](#types "Types")
 - [Syntax](#syntax "Syntax")
 - [Examples](#examples "Examples")
 - [See Also](#see-also "See Also")
@@ -40,6 +41,11 @@ import expandCSSHexColor from '@chriscodesthings/expand-css-hex-color';
 console.log(expandCSSHexColor("#cafe"));
 // => #ccaaffee
 ```
+
+## Types
+
+This package uses types from:
+- [**basic-color-types**: Defines named types for common color formats](https://github.com/ChrisCodesThings/basic-color-types "Defines named types for common color formats")
 
 ## Syntax
 

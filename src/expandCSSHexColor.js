@@ -1,9 +1,11 @@
 // @ts-check
 
+import * as Types from "@chriscodesthings/basic-color-types";
+
 /**
  * Expands a CSS hex colour code to it's longest form
- * @param {string} col CSS hex colour code to expand
- * @returns {string}
+ * @param {Types.cssHexCode} col CSS hex colour code to expand
+ * @returns {Types.cssHexCode}
  */
 export default function expandCSSHexColorCode(col) {
     col = col.slice(1);
